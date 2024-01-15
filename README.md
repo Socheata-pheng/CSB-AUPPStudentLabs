@@ -11,3 +11,4 @@ System Features:
 3. Web Data Retrieval: Utilizes the urlopen function to fetch data from relevant school webpages. Extracts assessment information, student scores, and other relevant details.
 4. Content Analysis: Analyzes assessment data to identify trends, patterns, and outliers. Generates statistical summaries, class averages, and individual student performance metrics.
 5. Summarization: Produces summaries of assessment activities for the school principal. Highlights key insights, areas of improvement, and outstanding achievements.
+ 
