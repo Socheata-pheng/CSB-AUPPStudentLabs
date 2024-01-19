@@ -71,30 +71,32 @@ class Playlist:
         for idx, song in enumerate(self.songs, start=1):
             print(f"{idx}. {song}")
 # Create songs
-song1 = Song("Song1", "Artist1", "Album1", "Rock", "3:45")
-song2 = Song("Song2", "Artist2", "Album2", "Pop", "4:20")
-song3 = Song("Song3", "Artist1", "Album3", "Jazz", "5:10")
+song1 = Song("Love Story", "Taylor Swift", "Fearless", "Country Pop", "3:56")
+song2 = Song("Style", "Taylor Swift", "1989", "Synth-Pop", "3:51")
+song3 = Song("Need To Know", "Doja Cat", "Amala", "Hip Hop", "3:31")
+song4 = Song("Wildest Dream", "Taylor Swift", "1989","Synth-Pop", "3:40")
 
 # Create music library and add songs
 music_library = MusicLibrary()
 music_library.add_song(song1)
 music_library.add_song(song2)
 music_library.add_song(song3)
+music_library.add_song(song4)
 
 # Retrieve songs by various criteria
-print("\nSongs by Artist 1:")
-songs_by_artist1 = music_library.get_songs_by_artist("Artist1")
-for song in songs_by_artist1:
+print("\nSongs by Taylor Swift:")
+songs_by_Taylor = music_library.get_songs_by_artist("Taylor Swift")
+for song in songs_by_Taylor:
     print(f"{song.title} - {song.album}")
 print("-------------------------------")
-print("\nSongs in Album2:")
-song_in_album1 = music_library.get_songs_by_album("Album2")
+print("\nSongs in Album 1989:")
+song_in_album1 = music_library.get_songs_by_album("1989")
 for song in song_in_album1:
     print(f"{song.title} - {song.artist}")
 print("-------------------------------")
-print("\nSongs in Jazz Genre:")
-song_in_jazz = music_library.get_songs_by_genre("Jazz")
-for song in song_in_jazz:
+print("\nSongs in Synth-Pop Genre:")
+song_in_genre = music_library.get_songs_by_genre("Synth-Pop")
+for song in song_in_genre:
     print(f"{song.title} - {song.artist} - {song.album}")
 print("-------------------------------")
 
@@ -103,6 +105,7 @@ playlist1 = Playlist("MyPlaylist")
 playlist1.add_song(song1)
 playlist1.add_song(song2)
 playlist1.add_song(song3)
+playlist1.add_song(song4)
 
 # Display playlist
 playlist1.display_playlist()
@@ -110,13 +113,13 @@ playlist1.display_playlist()
 # Remove a song from the playlist
 playlist1.remove_song(song2)
 print("-------------------------------")
-print("\nPlaylist after removing 'Song2':")
+print("\nPlaylist after removing 'Style':")
 playlist1.display_playlist()
 
 # Reorder songs in the playlist
-playlist1.reorder_songs([2, 0, 1])
+playlist1.reorder_songs([1,2, 3,0])
 print("-------------------------------")
-print("\nPlaylist reordering after remove 'Song2' :")
+print("\nPlaylist reordering after remove 'Style' :")
 playlist1.display_playlist()
 
 
